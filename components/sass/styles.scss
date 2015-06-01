@@ -1,0 +1,21 @@
+/* imports */
+
+@import "compass";
+
+//core parts
+
+@import "variables";
+@import "mixins";
+@import "modules";
+
+//js parts
+
+body {
+	background-color: red;
+}
+section{
+	background-color: blue;
+}
+.container {
+    background-color: $color1;
+}
