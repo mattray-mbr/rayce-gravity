@@ -1,5 +1,5 @@
 .DS_Store
-node-nodules
+node-modules
 .tmp
 .sass-cache
 builds/**/images/*
