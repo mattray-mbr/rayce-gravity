@@ -1,4 +1,5 @@
 /* imports */
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700|Trade+Winds);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -60,9 +61,15 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+h1, h2, h3 {
+  font-family: font-family "Trade Winds", sans-serif;
 }
 
 p {
+  font-family: font-family "Droid Serif", serif;
   font-size: 18px;
   margin: 15px;
 }
@@ -71,8 +78,8 @@ p {
   margin: 0;
 }
 
-.glyphicon {
-  color: green;
+.glyphicon-tree-conifer {
+  color: #006b24;
   margin-left: 10px;
 }
 
@@ -106,11 +113,12 @@ section {
 
 .name {
   height: 200px;
-  background-color: #666;
+  background-color: #ccc;
+  padding-top: 20px;
 }
 .name h1 {
   font-size: 4.8em;
-  color: green;
+  color: #006b24;
   text-shadow: 2px 2px #000;
 }
 .name h3 {
@@ -139,19 +147,42 @@ section {
   height: 50px;
   margin: 0 0 10px 0;
   padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
+.navbar-nav {
+  width: 100%;
+  padding: 0  0 20px;
+}
+@media (min-width: 1200px) {
+  .navbar-nav {
+    padding: 0 90px 0 90px;
+  }
+}
 .navbar-nav li {
   font-size: 1.6em;
+  width: 19.5%;
 }
 .navbar-nav li a {
-  background-color: #fff;
+  margin-right: 0;
+  text-align: center;
+}
+
+.navbar-inverse .navbar-nav li a {
+  color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar-inverse .navbar-nav li a:hover {
+  color: green;
   text-decoration: underline;
 }
 
 .item {
   margin: 0 auto;
-  border: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
   background-color: #333;
 }
 .item img {
@@ -166,6 +197,7 @@ section {
 
 .page {
   padding: 0;
+  background-color: #e6e6e6;
 }
 .page h1 {
   font-size: 3.2em;
@@ -185,9 +217,46 @@ section {
   margin: 0 auto;
   height: 400px;
   display: block;
-  background-color: black;
 }
 
 .words {
   display: inline-block;
+  background-color: #e6e6e6;
+  padding-top: 10px;
+}
+
+footer {
+  background-color: #1a1a1a;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  border-top: 2px solid #ccc;
+}
+footer span {
+  color: #999;
+  text-align: center;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.fadeB {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgwODA4MCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFlMWUxZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #808080), color-stop(100%, #1e1e1e));
+  background-image: -moz-linear-gradient(right, #808080, #1e1e1e);
+  background-image: -webkit-linear-gradient(right, #808080, #1e1e1e);
+  background-image: linear-gradient(to left, #808080, #1e1e1e);
+  height: 400px;
+}
+
+.fadeA {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgwODA4MCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFlMWUxZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #808080), color-stop(100%, #1e1e1e));
+  background-image: -moz-linear-gradient(left, #808080, #1e1e1e);
+  background-image: -webkit-linear-gradient(left, #808080, #1e1e1e);
+  background-image: linear-gradient(to right, #808080, #1e1e1e);
+  height: 400px;
 }

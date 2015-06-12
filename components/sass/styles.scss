@@ -16,16 +16,21 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
+}
+h1, h2, h3 {
+    font-family: $headfont;
 }
 p {
+    font-family: $bodyfont;
     font-size: 18px;
     margin: 15px;
 }
 .row {
     margin: 0;
 }
-.glyphicon {
-    color: green;
+.glyphicon-tree-conifer {
+    color: $green;
     margin-left: 10px;
 }
 header .row {
@@ -54,10 +59,12 @@ section {
 }
 .name {
     height: 200px;
-    background-color: #666;
+    background-color: #ccc;
+    padding-top: 20px;
     h1 {
+        //font-family: "Merienda One", sans-serif;
         font-size: 4.8em;
-        color: green;
+        color: $green;
         text-shadow: 2px 2px #000;
     }
     h3 {
@@ -83,19 +90,43 @@ section {
     height: 50px;
     margin: 0 0 10px 0;
     padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 .navbar-nav {
+    width: 100%;
+    padding: 0  0 20px;
+    @media (min-width: 1200px) {
+        padding: 0 90px 0 90px;
+    }
     li {
         font-size: 1.6em;
+        width: 19.5%;
         a {
-            background-color: #fff;
+           // text-decoration: underline;
+           margin-right: 0;
+           text-align: center;
+        }
+    }
+}
+ //temorary !!!!!
+.navbar-inverse .navbar-nav{
+    li {
+        a {
+            color: #fff;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        a:hover {
+            color: green;
             text-decoration: underline;
         }
     }
 }
 .item {
     margin: 0 auto;
-    border: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     background-color: #333;
     img {
         width: 100%;
@@ -108,6 +139,7 @@ section {
 }
 .page {
     padding: 0;
+    background-color: #e6e6e6;
     h1 {
         font-size: 3.2em;
         text-align: center;
@@ -125,9 +157,32 @@ section {
         margin: 0 auto;
         height: 400px;
         display: block;
-        background-color: black;
     }
 }
 .words {
     display: inline-block;
+    background-color: #e6e6e6;
+    padding-top: 10px;
+}
+footer {
+    background-color: #1a1a1a;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border-top: 2px solid #ccc;
+    span {
+        color: #999;
+        text-align: center;
+    }
+}
+.btn {
+    margin-top:10px;
+}
+.fadeB {
+    @include background-image(linear-gradient(to left,#808080 , #1e1e1e));
+    height: 400px;
+}
+.fadeA {
+    @include background-image(linear-gradient(to right,#808080 , #1e1e1e));
+    height: 400px;
 }
