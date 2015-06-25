@@ -12,7 +12,7 @@
 //js parts
 
 body {
-    background-color: #ccc;
+    background-color: #666;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -29,16 +29,15 @@ p {
 .row {
     margin: 0;
 }
-.glyphicon-tree-conifer {
-    color: $green;
-    margin-left: 10px;
+.heading {
+    @include background-image(radial-gradient( #ccc 300px, #666 900px));
 }
 header .row {
     margin-left: -15px;
     margin-top: 0;
+    background-color: black;
 }
 .container {
-    background-color: #666;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -48,28 +47,37 @@ section {
     width: 100%;
 } 
 .logo {
-    background-color: #666;
+    background-color: transparent;
     padding-left: 0;
     img {
-        border: 3px solid black;
-        width: 200px;
-        height: 200px;
-        margin-left: 0;
+        background-color: transparent;
+        //border: 3px solid black;
+        width: 160px;
+        //border: 1px solid black;
+       // border-radius: 40px;
+        height: 160px;
+        margin: 10px 0 0 0;
     }
 }
 .name {
-    height: 200px;
-    background-color: #ccc;
-    padding-top: 20px;
+    height: 170px;
+    background-color: transparent;
     h1 {
-        //font-family: "Merienda One", sans-serif;
-        font-size: 4.8em;
-        color: $green;
+        font-family: "Racing Sans One", sans-serif;
+        font-size: 5.2em;
+        color: $gold;
         text-shadow: 2px 2px #000;
+        @media (max-width: 575px) {
+            font-size: 3.6em;
+        }
+        @media (min-width: 1400px) {
+            font-size: 6em;
+        }
     }
     h3 {
-        font-size: 2em;
-        color: red;
+        font-size: 1.8em;
+        margin-top: 10px;
+        color: black;
     }
 }
 .fixed {
@@ -79,35 +87,53 @@ section {
     width: 100%;
 }
 .nav-menu-small {
-    color: red;
+    color: $gold;
     font-size: 1.5em;
-    margin-left: 200px;
+    margin-left: 30%;
+    margin-top: 15px;
+    float: left;
 }
 .menuButton {
-    margin-right: 150px;
+    margin-right: 39%;
+    float: right;
 }
 #nav-row {
     height: 50px;
     margin: 0 0 10px 0;
     padding: 0;
-    border: 1px solid #ccc;
+    border: 1px solid #666;
     border-radius: 5px;
 }
 .navbar-nav {
     width: 100%;
     padding: 0  0 20px;
+    @media (min-width: 768px) {
+        max-height: 50px;
+    }
     @media (min-width: 1200px) {
         padding: 0 90px 0 90px;
     }
     li {
         font-size: 1.6em;
         width: 19.5%;
+        @media (max-width: 767px) {
+                padding-left: 30%;
+           }
         a {
            // text-decoration: underline;
            margin-right: 0;
            text-align: center;
+           @media (min-width: 400px) {
+                width: 200px;
+           }
         }
     }
+}
+#navi-bar {
+    z-index: 1;   
+}
+.collapse {
+    //padding-left: 100px;
 }
  //temorary !!!!!
 .navbar-inverse .navbar-nav{
@@ -118,7 +144,7 @@ section {
             padding-right: 0;
         }
         a:hover {
-            color: green;
+            color: $gold;
             text-decoration: underline;
         }
     }
@@ -155,8 +181,7 @@ section {
     img {
         width: 100%;
         margin: 0 auto;
-        height: 400px;
-        display: block;
+        max-height: 400px;
     }
 }
 .words {
@@ -166,23 +191,24 @@ section {
 }
 footer {
     background-color: #1a1a1a;
-    height: 40px;
-    padding: 10px;
+    height: 30px;
+    padding: 8px;
     border-radius: 5px;
     border-top: 2px solid #ccc;
     span {
         color: #999;
         text-align: center;
+        font-size: 12px;
     }
 }
 .btn {
     margin-top:10px;
 }
 .fadeB {
-    @include background-image(linear-gradient(to left,#808080 , #1e1e1e));
+    @include background-image(linear-gradient(to left, #1e1e1e, #4c4c4c));
     height: 400px;
 }
 .fadeA {
-    @include background-image(linear-gradient(to right,#808080 , #1e1e1e));
+    @include background-image(linear-gradient(to right,  #1e1e1e, #4c4c4c));
     height: 400px;
 }
