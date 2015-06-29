@@ -1,5 +1,5 @@
 /* imports */
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700|Racing+Sans+One|Merienda+One|Oleo+Script);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700|Racing+Sans+One|Merienda+One);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -86,20 +86,8 @@ p {
   background-image: radial-gradient(#cccccc 300px, #666666 900px);
 }
 
-header .row {
-  margin-left: -15px;
-  margin-top: 0;
-  background-color: black;
-}
-
-.container {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 section {
-  background-color: #999;
+  background-color: #e6e6e6;
   width: 100%;
 }
 
@@ -108,9 +96,8 @@ section {
   padding-left: 0;
 }
 .logo img {
-  background-color: transparent;
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   margin: 10px 0 0 0;
 }
 
@@ -119,10 +106,10 @@ section {
   background-color: transparent;
 }
 .name h1 {
-  font-family: "Racing Sans One", sans-serif;
+  font-family: font-family "Racing Sans One", sans-serif;
   font-size: 5.2em;
   color: #D1A319;
-  text-shadow: 2px 2px #000;
+  text-shadow: 2px 2px black;
 }
 @media (max-width: 575px) {
   .name h1 {
@@ -206,7 +193,7 @@ section {
 }
 
 .navbar-inverse .navbar-nav li a {
-  color: #fff;
+  color: white;
   padding-left: 0;
   padding-right: 0;
 }
@@ -232,12 +219,12 @@ section {
 }
 
 .page {
-  padding: 0;
   background-color: #e6e6e6;
 }
 .page h1 {
   font-size: 3.2em;
   text-align: center;
+  color: black;
 }
 .page p {
   font-size: 20px;
@@ -250,7 +237,6 @@ section {
 }
 .break-img img {
   width: 100%;
-  margin: 0 auto;
   max-height: 400px;
 }
 
@@ -261,7 +247,7 @@ section {
 }
 
 footer {
-  background-color: #1a1a1a;
+  background-color: #333;
   height: 30px;
   padding: 8px;
   border-radius: 5px;
