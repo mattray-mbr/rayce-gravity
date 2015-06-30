@@ -4,6 +4,7 @@ var gulp = require ('gulp'),
     connect = require('gulp-connect'),
     compass = require('gulp-compass');
 
+
 var  env,
         jsSources,
         sassSources,
@@ -50,7 +51,7 @@ gulp.task('compass', function(){
     .pipe(compass({
         sass: 'components/sass',
         image: outputDir + 'images',
-        style: 'expanded'
+        style: sassStyle
     }))
     .on('error', gutil.log)
     .pipe(gulp.dest(outputDir + 'css'))
