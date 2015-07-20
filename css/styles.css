@@ -239,6 +239,11 @@ section {
   width: 100%;
   max-height: 400px;
 }
+@media (min-width: 950px) {
+  .break-img img {
+    min-height: 400px;
+  }
+}
 
 .words {
   display: inline-block;
