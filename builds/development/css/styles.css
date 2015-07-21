@@ -251,6 +251,13 @@ section {
   padding-top: 10px;
 }
 
+#email {
+  color: blue;
+  font-weight: bold;
+  font-size: 2em;
+  margin-left: 15px;
+}
+
 footer {
   background-color: #333;
   height: 30px;
