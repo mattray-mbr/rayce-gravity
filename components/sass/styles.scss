@@ -2,50 +2,48 @@
 
 @import "compass";
 @import "compass/reset";
+@import "compass/css3";
 @import "variables";
-// @import "mixins";
-//@import "modules";
 
-
-body {
-    background-color: #666;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
+//base styles
+p {
+    font-family: $body-font;
+    font-size: 20px;
+    margin: 15px;
 }
 h1, h2, h3 {
-    font-family: $headfont;
+    font-family: $head-font;
+    color: black;
 }
-p {
-    font-family: $bodyfont;
-    font-size: 18px;
-    margin: 15px;
+
+body {
+    background-color: $Mgray;
+    width: 100%;
+    position: relative;
 }
 .row {
     margin: 0;
 }
 .heading {
-    @include background-image(radial-gradient( #ccc 300px, #666 900px));
+    @include background-image(radial-gradient( #ccc 300px, $Mgray 900px));
 }
 section {
-    background-color: $Lgrey;
+    background-color: $Lgray;
     width: 100%;
 } 
 .logo {
     background-color: transparent;
-    padding-left: 0;
     img {
         width: 140px;
         height: 140px;
-        margin: 10px 0 0 0;
+        margin-top: 10px;
     }
 }
-.name {
+.title {
     height: 170px;
     background-color: transparent;
     h1 {
-        font-family: $Titlefont;
+        font-family: $title-font;
         font-size: 5.2em;
         color: $gold;
         text-shadow: 2px 2px black;
@@ -59,7 +57,6 @@ section {
     h3 {
         font-size: 1.8em;
         margin-top: 10px;
-        color: black;
     }
 }
 .fixed {
@@ -81,9 +78,8 @@ section {
 }
 #nav-row {
     height: 50px;
-    margin: 0 0 10px 0;
-    padding: 0;
-    border: 1px solid #666;
+    margin-bottom: 10px;
+    border: 1px solid $Mgray;
     border-radius: 5px;
 }
 .navbar-nav {
@@ -95,42 +91,36 @@ section {
     @media (min-width: 1200px) {
         padding: 0 90px 0 90px;
     }
-    li {
-        font-size: 1.6em;
-        width: 19.5%;
-        @media (max-width: 767px) {
-                padding-left: 30%;
-           }
-        a {
-           margin-right: 0;
-           text-align: center;
-           @media (min-width: 400px) {
-                width: 200px;
-           }
+}
+//96-115 used so that bootstrap is not overwriting my styles. probably a better way to do this? 
+.navbar-inverse .navbar-nav li {
+    font-size: 1.6em;
+    width: 19.5%;
+    @media (max-width: 767px) {
+        padding-left: 30%;
+    }
+    a {
+        color: white;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        &:hover {
+            color: $gold;
+            text-decoration: underline;
+        }
+        @media (min-width: 400px) {
+            width: 200px;
         }
     }
 }
 #navi-bar {
     z-index: 1;   
 }
-.navbar-inverse .navbar-nav{
-    li {
-        a {
-            color: white;
-            padding-left: 0;
-            padding-right: 0;
-        }
-        a:hover {
-            color: $gold;
-            text-decoration: underline;
-        }
-    }
-}
 .item {
     margin: 0 auto;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    background-color: $Dgrey;
+    background-color: $Dgray;
     img {
         width: 100%;
         @media (min-width: 1200px) {
@@ -141,14 +131,12 @@ section {
     }
 }
 .page {
-    background-color: $Lgrey;
+    background-color: $Lgray;
     h1 {
         font-size: 3.2em;
         text-align: center;
-        color: black;
-    }
+     }
     p {
-        font-size: 20px;
         color: black;
         line-height: 28px;
     }
@@ -163,9 +151,17 @@ section {
         }
     }
 }
+.fadeB {
+    @include background-image(linear-gradient(to left, #1e1e1e, #4c4c4c));
+    height: 400px;
+}
+.fadeA {
+    @include background-image(linear-gradient(to right,  #1e1e1e, #4c4c4c));
+    height: 400px;
+}
 .words {
     display: inline-block;
-    background-color: $Lgrey;
+    background-color: $Lgray;
     padding-top: 10px;
 }
 #email {
@@ -175,7 +171,7 @@ section {
     margin-left: 15px;
 }
 footer {
-    background-color: $Dgrey;
+    background-color: $Dgray;
     height: 30px;
     padding: 8px;
     border-radius: 5px;
@@ -186,15 +182,4 @@ footer {
         font-size: 12px;
     }
 }
-.btn {
-    margin-top:10px;
-}
 //borders for the break imgs
-.fadeB {
-    @include background-image(linear-gradient(to left, #1e1e1e, #4c4c4c));
-    height: 400px;
-}
-.fadeA {
-    @include background-image(linear-gradient(to right,  #1e1e1e, #4c4c4c));
-    height: 400px;
-}
