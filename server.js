@@ -2,7 +2,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
-var mongoose = require('mongoose');
+
 
 
 
@@ -24,7 +24,7 @@ app.get('/', function(req, res) {
 
 
 // Creating Server and Listening for Connections 
-var port = 3100
+var port = 80
 app.listen(port, function(){
   console.log('Server running on port ' + port);
 
